@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Switch, Route} from "react-router-dom";
 import Index from "./pages/index/index";
+// import Erreur from "./pages/error/" //FIXME finir l'import
 
 ReactDOM.render(
   <React.StrictMode>
