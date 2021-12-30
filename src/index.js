@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Switch, Route} from "react-router-dom";
+import Index from "./pages/index/index";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Switch>
+      <Route exact path="/"><Index /> </Route>
+      <Route path="/appartement/:id"><App /> </Route>
+      {/* <Route path="*"><Erreur /> </Route> */}
+    </Switch>
   </React.StrictMode>,
   document.getElementById('root')
 );
