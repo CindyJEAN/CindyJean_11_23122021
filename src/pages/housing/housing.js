@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Index extends React.Component {
+export default class Housing extends React.Component {
   constructor(props){
     super(props);
     console.log(props);
@@ -8,7 +8,7 @@ export default class Index extends React.Component {
 
   render(){
     return (
-      <div>Index</div>
+      <div>Housing</div>
     );
   }
 }

@@ -1,7 +1,8 @@
 import "./index.css";
-import {Route, BrowserRouter as Router,  Switch} from "react-router-dom";
-import App from "./App";
-// import Erreur from "./pages/error/" //FIXME finir l'import
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import About from "./pages/about/about";
+import Error from "./pages/error/error";
+import Housing from "./pages/housing/housing";
 import Index from "./pages/index/index";
 import React from "react";
 import ReactDOM from "react-dom";
@@ -11,9 +12,18 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/"><Index /> </Route>
-        <Route path="/appartement/:id"><App /> </Route>
-        {/* <Route path="*"><Erreur /> </Route> */}
+        <Route exact path="/">
+          <Index />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/appartement/:id">
+          <Housing />
+        </Route>
+        <Route>
+          <Error />
+        </Route>
       </Switch>
     </Router>
   </React.StrictMode>,
