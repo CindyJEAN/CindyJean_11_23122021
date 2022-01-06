@@ -2,6 +2,7 @@ import "./index.css";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import About from "./pages/about/about";
 import Error from "./pages/error/error";
+import Header from "./components/header/header";
 import Housing from "./pages/housing/housing";
 import Index from "./pages/index/index";
 import React from "react";
@@ -11,6 +12,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Index />
