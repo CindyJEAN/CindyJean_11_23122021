@@ -1,6 +1,6 @@
-import { Component } from "react";
+import React from "react";
 
-export default class Index extends Component {
+export default class Index extends React.Component {
   constructor(props){
     super(props);
     console.log(props);
@@ -9,6 +9,6 @@ export default class Index extends Component {
   render(){
     return (
       <div>ok</div>
-    )
+    );
   }
 }
