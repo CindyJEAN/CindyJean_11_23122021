@@ -1,4 +1,3 @@
-import "./header.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import logo from "../../assets/logo.svg";
@@ -11,7 +10,7 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="headerComponent">
         <nav>
           <Link to="/">
             <img src={logo} />

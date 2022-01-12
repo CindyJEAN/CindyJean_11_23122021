@@ -1,4 +1,4 @@
-import "./index.css";
+import "./index.scss";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import About from "./pages/about/about";
 import Error from "./pages/error/error";

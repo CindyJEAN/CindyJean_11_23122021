@@ -1,7 +1,4 @@
-:root {
-  --color: #ff6060;
-  --grey: #f6f6f6;
-}
+@import "../utils";
 
 body {
   margin: 0;
@@ -12,13 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .navLink {
-  color: var(--color);
+  color: $color;
   font-size: 0.75rem;
   text-transform: uppercase;
   font-weight: 500;
