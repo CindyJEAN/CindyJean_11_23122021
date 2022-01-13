@@ -2,30 +2,31 @@
 
 main.homePage {
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   max-width: 1240px;
-  row-gap: 1rem;
 
   @include tablet {
-    row-gap: 2rem;
-  } 
-  
+    margin: 0 auto 2rem;
+  }
+
   div.banner {
     width: 100%;
     height: 6.8rem;
     display: flex;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url(../../assets/banner_coast.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: $radius;
     align-items: center;
+    margin-bottom: 1rem;
 
     @include tablet {
       height: 13rem;
       border-radius: $radiusLarge;
       justify-content: center;
+      margin-bottom: 2rem;
     }
 
     h1 {
@@ -45,6 +46,19 @@ main.homePage {
           white-space: normal;
         }
       }
+    }
+  }
+
+  div.gallery {
+    width: 100%;
+    border-radius: $radius;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      background-color: $grey;
+      padding: 1rem;
+      border-radius: $radiusLarge;
     }
   }
 }

@@ -1,5 +1,8 @@
 @import "./base/base";
-@import "./components/header/header";
-@import "./components/footer/footer";
+//pages
 @import "./pages/error/error";
 @import "./pages/home/home";
+//components
+@import "./components/header/header";
+@import "./components/footer/footer";
+@import "./components/card/card";
