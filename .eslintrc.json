@@ -139,6 +139,7 @@
       "error",
       "always"
     ],
-    "no-useless-catch" : ["off"]
+    "no-useless-catch" : ["off"],
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}]
   }
 }
