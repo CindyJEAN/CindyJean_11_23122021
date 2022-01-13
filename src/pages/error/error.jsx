@@ -9,7 +9,7 @@ export default class Error extends React.Component {
 
   render() {
     return (
-      <section className="errorComponent">
+      <section className="errorPage">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/" className="link">

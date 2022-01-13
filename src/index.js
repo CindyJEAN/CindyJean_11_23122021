@@ -4,8 +4,8 @@ import About from "./pages/about/about";
 import Error from "./pages/error/error";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
+import Home from "./pages/home/home";
 import Housing from "./pages/housing/housing";
-import Index from "./pages/index/index";
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -16,7 +16,7 @@ ReactDOM.render(
       <Header />
       <Switch>
         <Route exact path="/">
-          <Index />
+          <Home />
         </Route>
         <Route path="/about">
           <About />

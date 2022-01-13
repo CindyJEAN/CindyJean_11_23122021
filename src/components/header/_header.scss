@@ -3,15 +3,22 @@
 header.headerComponent {
   width: 90vw;
   max-width: 1240px;
-  margin: auto;
+  margin: 0 auto;
 
   nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    // height: 100px;
+    height: 3rem;
     color: $color;
+    margin: 1.5rem 0 1rem;
+    
+    @include tablet {
+      height: 6rem;
+      margin: 2rem 0 3rem;
+    }
 
     div {
       margin-left: 1rem;
@@ -37,7 +44,7 @@ header.headerComponent {
       font-size: 1.5rem;
       text-transform: none;
     }
-  
+
     &:hover,
     &:active {
       text-decoration: underline;
