@@ -18,12 +18,12 @@ header.headerComponent {
       display: flex;
       gap: 1rem;
     }
-    
+
     img {
       width: 145px;
-      /* @media (min-width: 768px) {
+      @include tablet {
         width: initial;
-      } */
+      }
     }
   }
 }

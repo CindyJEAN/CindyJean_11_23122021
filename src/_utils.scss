@@ -1,5 +1,9 @@
 $color: #ff6060;
 $grey: #f6f6f6;
+$breakpoints: (
+    tablet: 768px,
+    desktop: 992px
+);
 
 @mixin tablet {
   @media screen and (min-width: map-get($breakpoints, tablet)) {@content}

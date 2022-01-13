@@ -1,12 +1,13 @@
 @import "../utils";
 
-body {
+body * {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Segoe UI",
+  font-family: "Montserrat", "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em;
 }
 
 .navLink {
@@ -15,14 +16,15 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   text-decoration: none;
-  /* @media (min-width: 768px) {
+  @include tablet {
     font-size: 1.5rem;
     text-transform: none;
-  } */
-}
-.navLink:hover,
-.navLink:active {
-  text-decoration: underline;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 main {
