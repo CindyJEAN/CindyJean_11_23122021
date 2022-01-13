@@ -2,6 +2,7 @@ import "./index.scss";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import About from "./pages/about/about";
 import Error from "./pages/error/error";
+import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Housing from "./pages/housing/housing";
 import Index from "./pages/index/index";
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Error />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
