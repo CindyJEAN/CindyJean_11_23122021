@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import logoWhite from "../../assets/logo_white.svg";
 
-export default class Footer extends React.Component {
+export default class Footer extends Component {
   constructor(props) {
     super(props);
     console.log(props);

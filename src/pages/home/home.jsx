@@ -1,13 +1,20 @@
+import React, { Component } from "react";
 import Card from "../../components/card/card";
-import React from "react";
-import { getAllLocations } from "../../data/locations";
+import { getAllAccommodations } from "../../data/accommodations";
 
-export default class Home extends React.Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
     console.log(props);
-    this.list = getAllLocations();
+    // this.state = {
+    //   accommodations: [],
+    // };
+    this.accommodations = getAllAccommodations();
   }
+
+  // componentDidMount() {
+  //   this.setState({ accommodations: getAllAccommodations });
+  // }
 
   render() {
     return (
@@ -19,9 +26,18 @@ export default class Home extends React.Component {
         </div>
 
         <div className="gallery">
-          {this.list.map((location) => (
-            <Card id={location.id} title={location.title} image={location.cover} key={location.id} />
-          ))}
+          {this.accommodations.map((accommodation) => {
+            const { id, title, cover } = accommodation;
+            return (
+              <Card
+                id={`accomodation-${id}`}
+                title={title}
+                image={cover}
+                key={id}
+                numberOfAccommodations={this.accommodations.length}
+              />
+            );
+          })}
         </div>
       </main>
     );

@@ -1,10 +1,10 @@
 import logements from "./logements.json";
 
-function getAllLocations(){
+function getAllAccommodations(){
   return logements;
 }
 
-function getLocation(id){
+function getAccommodation(id){
   for ( const location of logements){
     if (location.id === id) return location;
   }
@@ -12,6 +12,6 @@ function getLocation(id){
 }
 
 export {
-  getAllLocations,
-  getLocation
+  getAllAccommodations,
+  getAccommodation
 };

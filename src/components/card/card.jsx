@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
-import React from "react";
+import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 
-export default class Card extends React.Component {
+// interface ClassProps {
+//   title: String;
+//   image: String;
+// }
 
+export default class Card extends Component {
   id;
 
   image;
@@ -10,21 +14,22 @@ export default class Card extends React.Component {
   title;
 
   constructor(props) {
-    super();
+    super(props);
+    // console.log(props);
     for (const [key, value] of Object.entries(props)){
       this[key] = value;
     }
     //TODO click vers page housing
-    // const { title "card"} = this.props;
-
   }
 
   render() {
     return (
-      <article className="cardComponent" style={{backgroundImage: `url(${this.image})`}}>
+      <article
+        className="cardComponent"
+        style={{ backgroundImage: `url(${this.image})` }}
+      >
         <h2>{this.title}</h2>
       </article>
     );
   }
-
 }
