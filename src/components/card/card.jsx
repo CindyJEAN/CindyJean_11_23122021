@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // interface ClassProps {
 //   title: String;
@@ -15,21 +15,23 @@ export default class Card extends Component {
 
   constructor(props) {
     super(props);
-    // console.log(props);
-    for (const [key, value] of Object.entries(props)){
+    for (const [key, value] of Object.entries(props)) {
       this[key] = value;
     }
-    //TODO click vers page housing
   }
 
   render() {
+    // const { image, title } = this.props;
     return (
-      <article
-        className="cardComponent"
-        style={{ backgroundImage: `url(${this.image})` }}
-      >
-        <h2>{this.title}</h2>
-      </article>
+      // <Link to={`/accommodation/${this.id}`}>
+      <Link to={`/accommodation`}>
+        <article
+          className="cardComponent"
+          style={{ backgroundImage: `url(${this.image})` }}
+        >
+          <h2>{this.title}</h2>
+        </article>
+      </Link>
     );
   }
 }

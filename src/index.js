@@ -1,11 +1,11 @@
 import "./index.scss";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import About from "./pages/about/about";
+import AccommodationSheet from "./pages/accommodationSheet/accommodationSheet";
 import Error from "./pages/error/error";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Home from "./pages/home/home";
-import Housing from "./pages/housing/housing";
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -21,9 +21,11 @@ ReactDOM.render(
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/appartement/:id">
-          <Housing />
-        </Route>
+        <Route
+          // path="/accommodation/:id"
+          path="/accommodation"
+          render={(props) => <AccommodationSheet {...props} />}
+        />
         <Route>
           <Error />
         </Route>

@@ -81,8 +81,9 @@
       "error",
       7
     ],
-    "prefer-spread": ["warn"],
-
+    "prefer-spread": [
+      "warn"
+    ],
     "camelcase": [
       "warn"
     ],
@@ -139,7 +140,17 @@
       "error",
       "always"
     ],
-    "no-useless-catch" : ["off"],
-    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}]
+    "no-useless-catch": [
+      "off"
+    ],
+    "react/no-unescaped-entities": [
+      "error",
+      {
+        "forbid": [
+          ">",
+          "}"
+        ]
+      }
+    ]
   }
 }
