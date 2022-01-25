@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-// interface ClassProps {
-//   title: String;
-//   image: String;
-// }
-
 export default class Card extends Component {
   id;
-
   image;
-
   title;
 
+  /**
+   * @param {import("../../typedef").accommodation} props
+  //  * @param {Object} props
+  //  * @param {String} props.id
+   * Comment récupérer les types de props.id, props.title depuis le typedef?
+   */
   constructor(props) {
     super(props);
     for (const [key, value] of Object.entries(props)) {
@@ -21,14 +20,10 @@ export default class Card extends Component {
   }
 
   render() {
-    // const { image, title } = this.props;
     return (
-      // <Link to={`/accommodation/${this.id}`}>
-      <Link to={`/accommodation`}>
-        <article
-          className="cardComponent"
-          style={{ backgroundImage: `url(${this.image})` }}
-        >
+      // <Link to={"/accommodation"} className="cardComponent">
+      <Link to={`/accommodation/${this.id}`} className="cardComponent">
+        <article style={{ backgroundImage: `url(${this.image})` }}>
           <h2>{this.title}</h2>
         </article>
       </Link>

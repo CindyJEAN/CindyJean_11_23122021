@@ -138,7 +138,10 @@
     ],
     "lines-between-class-members": [
       "error",
-      "always"
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
     ],
     "no-useless-catch": [
       "off"

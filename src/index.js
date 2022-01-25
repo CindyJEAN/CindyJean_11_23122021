@@ -22,8 +22,8 @@ ReactDOM.render(
           <About />
         </Route>
         <Route
-          // path="/accommodation/:id"
-          path="/accommodation"
+          path="/accommodation/:id"
+          // path="/accommodation"
           render={(props) => <AccommodationSheet {...props} />}
         />
         <Route>

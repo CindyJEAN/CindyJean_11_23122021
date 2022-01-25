@@ -30,10 +30,10 @@ export default class Home extends Component {
             const { id, title, cover } = accommodation;
             return (
               <Card
-                id={`accomodation-${id}`}
+                key={`accomodation-${id}`}
                 title={title}
                 image={cover}
-                key={id}
+                id={id}
                 numberOfAccommodations={this.accommodations.length}
               />
             );
