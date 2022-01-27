@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Carousel from "../../components/carousel/carousel";
 import Tag from "../../components/tag/tag";
 import { getAccommodation } from "../../data/accommodations";
 import starGrey from "../../assets/icon_star_grey.svg";
@@ -45,8 +46,8 @@ export default class AccommodationSheet extends Component {
   render() {
     // const { accommodationData } = this.state;
     return (
-      //TODO carousel component
       <main className="accommodationSheetPage">
+        <Carousel pictures={this.pictures} />
         <h1>{this.title}</h1>
         <address>{this.location}</address>
         <div className="tagsContainer">

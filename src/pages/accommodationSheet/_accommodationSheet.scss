@@ -5,6 +5,7 @@ main.accommodationSheetPage {
   margin: auto;
   display: grid;
   grid-template-areas:
+    "carousel carousel"
     "title title"
     "address address"
     "tags tags"
@@ -13,11 +14,12 @@ main.accommodationSheetPage {
 
   @include tablet {
     grid-template-areas:
+      "carousel carousel"
       "title host"
       "address host"
       "tags rating"
       "description description";
-    grid-template-rows: 2fr 1fr 2fr;
+    // grid-template-rows: 2fr 1fr 2fr;
   }
 
   h1,
@@ -26,12 +28,12 @@ main.accommodationSheetPage {
     font-weight: 500;
     margin-bottom: 0.5rem;
   }
-  
+
   h1 {
     font-size: 1.125rem;
     margin-top: 0;
     grid-area: title;
-    
+
     @include tablet {
       font-size: 2.25rem;
       align-self: flex-end;
@@ -53,7 +55,6 @@ main.accommodationSheetPage {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
   }
 
   .rating {
@@ -110,5 +111,10 @@ main.accommodationSheetPage {
         font-size: 1.125rem;
       }
     }
+
+  }
+  
+  .carouselComponent {
+    grid-area: carousel;
   }
 }
