@@ -1,3 +1,114 @@
+@import "../../base/utils";
+
 main.accommodationSheetPage {
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "address address"
+    "tags tags"
+    "rating host"
+    "description description";
+
+  @include tablet {
+    grid-template-areas:
+      "title host"
+      "address host"
+      "tags rating"
+      "description description";
+    grid-template-rows: 2fr 1fr 2fr;
+  }
+
+  h1,
+  address {
+    color: $color;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
   
+  h1 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    grid-area: title;
+    
+    @include tablet {
+      font-size: 2.25rem;
+      align-self: flex-end;
+    }
+  }
+
+  address {
+    font-size: 0.875rem;
+    font-style: normal;
+    grid-area: address;
+
+    @include tablet {
+      font-size: 1.125rem;
+    }
+  }
+
+  .tagsContainer {
+    grid-area: tags;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  .rating {
+    grid-area: rating;
+    align-self: center;
+    display: flex;
+
+    @include tablet {
+      justify-content: flex-end;
+      align-self: flex-start;
+    }
+
+    img {
+      width: 18px;
+      width: 18px;
+      padding: 0 5px 0 0;
+
+      @include tablet {
+        width: initial;
+        height: initial;
+        padding: 0 0 0 5px;
+      }
+    }
+  }
+
+  .host {
+    grid-area: host;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      margin: 1rem 0;
+
+      @include tablet {
+        width: 4rem;
+        height: 4rem;
+        margin: 1.5rem 0;
+      }
+    }
+
+    p {
+      padding-right: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: $color;
+
+      @include tablet {
+        font-size: 1.125rem;
+      }
+    }
+  }
 }

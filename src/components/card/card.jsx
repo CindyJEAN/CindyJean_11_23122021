@@ -21,7 +21,6 @@ export default class Card extends Component {
 
   render() {
     return (
-      // <Link to={"/accommodation"} className="cardComponent">
       <Link to={`/accommodation/${this.id}`} className="cardComponent">
         <article style={{ backgroundImage: `url(${this.image})` }}>
           <h2>{this.title}</h2>
