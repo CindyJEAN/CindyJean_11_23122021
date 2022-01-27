@@ -5,6 +5,7 @@ import { getAccommodation } from "../../data/accommodations";
 import starGrey from "../../assets/icon_star_grey.svg";
 import starPrimary from "../../assets/icon_star_primary.svg";
 export default class AccommodationSheet extends Component {
+  //TODO comment props
   title;
   cover;
   pictures;
@@ -16,15 +17,13 @@ export default class AccommodationSheet extends Component {
   tags;
   /**
    * @param {Object} props
-  //  * @param {Object} props.match
-  //  * @param {Object} props.match.params
-  //  * @param {String} props.match.params.id
    */
   constructor(props) {
     super(props);
     this.id = this.props.match.params.id;
 
     this.accommodationData = getAccommodation(this.id);
+
     for (const [key, value] of Object.entries(this.accommodationData)) {
       this[key] = value;
     }
@@ -72,11 +71,3 @@ export default class AccommodationSheet extends Component {
     );
   }
 }
-
-// AccommodationSheet.propTypes = {
-//   match: {
-//     params: {
-//       id: String,
-//     },
-//   },
-// };

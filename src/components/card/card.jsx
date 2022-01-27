@@ -7,16 +7,19 @@ export default class Card extends Component {
   title;
 
   /**
-   * @param {import("../../typedef").accommodation} props
-  //  * @param {Object} props
-  //  * @param {String} props.id
-   * Comment récupérer les types de props.id, props.title depuis le typedef?
+   * @param {Object} props
+   * @param {String} props.id
+   * @param {String} props.image
+   * @param {String} props.title
    */
   constructor(props) {
     super(props);
-    for (const [key, value] of Object.entries(props)) {
-      this[key] = value;
-    }
+    // for (const [key, value] of Object.entries(props)) {
+    //   this[key] = value;
+    // }
+    this.id = props.id;
+    this.image = props.image;
+    this.title = props.title;
   }
 
   render() {

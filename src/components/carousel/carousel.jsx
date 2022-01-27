@@ -25,23 +25,28 @@ export default class Carousel extends Component {
     });
   }
 
+  /**
+   * @param {("previous" | "next") } move
+   * @returns {void}  update state
+   */
   handleChangePicture(move) {
-    let actualStep = this.state.step;
-    if (move === "next") {
-      if (actualStep === this.stepsNumber - 1) {
-        actualStep = 0;
-      } else {
-        actualStep = actualStep + 1;
-      }
-    } else if (actualStep === 0) {
-      actualStep = this.stepsNumber - 1;
-    } else {
-      actualStep = actualStep - 1;
-    }
+    const step = this.newStep(move);
     this.setState({
-      actualPicture: this.pictures[actualStep],
-      step: actualStep,
+      actualPicture: this.pictures[step],
+      step: step,
     });
+  }
+
+  /**
+   * TODO  compléter
+   * @param {("previous" | "next") } move
+   * @returns {Number}  new slider position
+   */
+  newStep(move) {
+    const step = move === "next" ? this.state.step + 1 : this.state.step - 1;
+    if (step < 0) return this.stepsNumber - 1;
+    if (step >= this.stepsNumber) return 0;
+    return step;
   }
 
   render() {

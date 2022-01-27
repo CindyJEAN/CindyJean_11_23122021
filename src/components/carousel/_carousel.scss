@@ -32,11 +32,13 @@
   h2 {
     grid-area: step;
     justify-self: center;
-    color: transparent;
+    // color: transparent;
+    display: none;
     font-size: 1.125rem;
     font-weight: 500;
 
     @include tablet {
+      display: block;
       color: white;
     }
   }
