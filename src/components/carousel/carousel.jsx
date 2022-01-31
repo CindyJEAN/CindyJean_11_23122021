@@ -12,6 +12,7 @@ export default class Carousel extends Component {
     super(props);
     this.pictures = props.pictures;
     this.stepsNumber = this.pictures.length;
+
     this.state = {
       actualPicture: "",
       step: 0,
@@ -26,6 +27,8 @@ export default class Carousel extends Component {
   }
 
   /**
+   * takes the move (previous or next) in the carousel pictures
+   * and updates the state with the new step and picture
    * @param {("previous" | "next") } move
    * @returns {void}  update state
    */
@@ -38,9 +41,10 @@ export default class Carousel extends Component {
   }
 
   /**
-   * TODO  compléter
+   * takes the move (previous or next) in the carousel pictures
+   * and returns the new step
    * @param {("previous" | "next") } move
-   * @returns {Number}  new slider position
+   * @returns {Number}  new step in carousel
    */
   newStep(move) {
     const step = move === "next" ? this.state.step + 1 : this.state.step - 1;
@@ -51,7 +55,7 @@ export default class Carousel extends Component {
 
   render() {
     return (
-      <section className="carouselComponent">
+      <div className="carouselComponent">
         <img src={this.state.actualPicture} className="carousel" />
         <button
           onClick={() => this.handleChangePicture("previous")}
@@ -65,10 +69,10 @@ export default class Carousel extends Component {
         >
           <img src={arrow} alt="" />
         </button>
-        <h2>
+        <p>
           {this.state.step + 1}/{this.stepsNumber}
-        </h2>
-      </section>
+        </p>
+      </div>
     );
   }
 }

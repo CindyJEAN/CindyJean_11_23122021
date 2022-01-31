@@ -1,49 +1,81 @@
 import React, { Component } from "react";
 import Carousel from "../../components/carousel/carousel";
 import Tag from "../../components/tag/tag";
-import { getAccommodation } from "../../data/accommodations";
+import { getAccommodationById } from "../../data/accommodations";
 import starGrey from "../../assets/icon_star_grey.svg";
 import starPrimary from "../../assets/icon_star_primary.svg";
 export default class AccommodationSheet extends Component {
-  //TODO comment props
+  //#region variables declaration
+  /**
+   * @type {String}
+   */
   title;
+  /**
+   * @type {String}
+   */
   cover;
+  /**
+   * @type {Array.<String>}
+   */
   pictures;
+  /**
+   * @type {String}
+   */
   description;
+  /**
+   * @type {Object}
+   */
   host;
+  /**
+   * @type {String}
+   */
   rating;
+  /**
+   * @type {String}
+   */
   location;
+  /**
+   * @type {Array.<String>}
+   */
   equipments;
+  /**
+   * @type {Array.<String>}
+   */
   tags;
+  //#endregion
+
   /**
    * @param {Object} props
    */
   constructor(props) {
     super(props);
+
     this.id = this.props.match.params.id;
-
-    this.accommodationData = getAccommodation(this.id);
-
+    this.accommodationData = getAccommodationById(this.id);
     for (const [key, value] of Object.entries(this.accommodationData)) {
       this[key] = value;
     }
 
-    this.ratings = [];
-    for (let i = 5, rating = Number(this.rating); i > 0; i--, rating--) {
-      if (rating > 0) {
-        this.ratings.push("primary");
-      } else {
-        this.ratings.push("grey");
-      }
-    }
+    this.ratings = this.getRatingsAsArray(this.rating);
   }
 
-  // componentDidMount() {
-  //   this.setState({ accommodationData: getAccommodation(this.id) });
-  // }
+  /**
+   * changes the n number of rating in an array of n "primary" and 5-n "grey"
+   * @returns {Array} array of "primary" and "grey"
+   */
+  getRatingsAsArray(rating) {
+    const ratings = [];
+    for (let i = 5, ratingNumber = Number(rating); i > 0; i--, ratingNumber--) {
+      if (ratingNumber > 0) {
+        ratings.push("primary");
+      } else {
+        ratings.push("grey");
+      }
+    }
+    return ratings;
+  }
 
   render() {
-    // const { accommodationData } = this.state;
     return (
       <main className="accommodationSheetPage">
         <Carousel pictures={this.pictures} />

@@ -29,13 +29,14 @@
     }
   }
 
-  h2 {
+  p {
     grid-area: step;
     justify-self: center;
     // color: transparent;
     display: none;
     font-size: 1.125rem;
     font-weight: 500;
+    margin-bottom: 2rem;
 
     @include tablet {
       display: block;
@@ -52,6 +53,7 @@
     width: fit-content;
 
     img {
+      cursor: pointer;
       @include tablet {
         width: 4rem;
       }

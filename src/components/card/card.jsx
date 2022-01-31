@@ -14,9 +14,7 @@ export default class Card extends Component {
    */
   constructor(props) {
     super(props);
-    // for (const [key, value] of Object.entries(props)) {
-    //   this[key] = value;
-    // }
+
     this.id = props.id;
     this.image = props.image;
     this.title = props.title;
