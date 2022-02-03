@@ -100,8 +100,8 @@ export default class AccommodationSheet extends Component {
           <img src={this.host.picture} />
         </div>
         <div className="dropdownContainer">
-          <Dropdown title="Description" content={[this.description]} />
-          <Dropdown title="Equipements" content={[...this.equipments]} />
+          <Dropdown label="Description" content={[this.description]} />
+          <Dropdown label="Equipements" content={[...this.equipments]} />
         </div>
       </main>
       //TODO dropdown component

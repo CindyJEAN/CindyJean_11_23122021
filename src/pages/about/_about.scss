@@ -1,0 +1,29 @@
+.aboutPage {
+  width: 90vw;
+  margin: 0 auto 1rem;
+  max-width: 1240px;
+
+  .banner {
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../assets/banner_mountain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $radius;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      border-radius: $radiusLarge;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .dropdownComponent {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

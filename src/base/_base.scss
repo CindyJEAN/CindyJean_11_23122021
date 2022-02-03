@@ -17,6 +17,12 @@ body {
 main {
   width: 90vw;
   max-width: 1240px;
+  min-height: calc(100vh - 5.5rem);
+
+  @include tablet {
+
+    min-height: calc(100vh - 11rem);
+  }
 }
 
 button {

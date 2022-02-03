@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import arrow from "../../assets/icon_arrow.svg";
 
 export default class Dropdown extends Component {
-  title;
+  label;
   content;
 
   /**
    * @param {Object} props
-   * @param {String} props.title
+   * @param {String} props.label
    * @param {Array.<String>} props.content
    */
   constructor(props) {
     super(props);
 
-    this.title = props.title;
+    this.label = props.label;
     this.content = props.content;
 
     this.state = {
@@ -37,7 +37,7 @@ export default class Dropdown extends Component {
         }`}
       >
         <button onClick={() => this.handleDropdownClick()}>
-          {this.title}
+          {this.label}
           <img src={arrow} alt="" />
         </button>
         <div>

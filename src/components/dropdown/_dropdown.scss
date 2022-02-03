@@ -32,7 +32,7 @@
   }
 
   img {
-    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-in-out;
     @include tablet {
       width: 1.5rem;
     }
@@ -44,6 +44,10 @@
       margin: -1px;
       height: 1px;
       opacity: 0;
+
+      @include tablet {
+        padding: 0 1.5rem;
+      }
     }
   }
 

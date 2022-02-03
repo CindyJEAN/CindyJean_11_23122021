@@ -9,13 +9,13 @@ export default class Error extends Component {
 
   render() {
     return (
-      <section className="errorPage">
+      <main className="errorPage">
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/" className="link">
           Retourner sur la page d'accueil
         </Link>
-      </section>
+      </main>
     );
   }
 }
