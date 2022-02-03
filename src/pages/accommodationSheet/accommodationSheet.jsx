@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Carousel from "../../components/carousel/carousel";
+import Dropdown from "../../components/dropdown/dropdown";
 import Tag from "../../components/tag/tag";
 import { getAccommodationById } from "../../data/accommodations";
 import starGrey from "../../assets/icon_star_grey.svg";
@@ -97,6 +98,10 @@ export default class AccommodationSheet extends Component {
         <div className="host">
           <p>{this.host.name}</p>
           <img src={this.host.picture} />
+        </div>
+        <div className="dropdownContainer">
+          <Dropdown title="Description" content={[this.description]} />
+          <Dropdown title="Equipements" content={[...this.equipments]} />
         </div>
       </main>
       //TODO dropdown component
