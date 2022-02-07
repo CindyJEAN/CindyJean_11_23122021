@@ -13,11 +13,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: $radius;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     @include tablet {
       border-radius: $radiusLarge;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
   }
 

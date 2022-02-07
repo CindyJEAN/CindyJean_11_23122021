@@ -11,6 +11,7 @@ main.accommodationSheetPage {
     "tags tags"
     "rating host"
     "description description";
+  grid-template-rows: repeat(6, min-content);
 
   @include tablet {
     grid-template-areas:
@@ -19,7 +20,8 @@ main.accommodationSheetPage {
       "address host"
       "tags rating"
       "description description";
-    // grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: repeat(5, min-content);
+    // grid-template-rows: repeat(4, min-content) auto;
   }
 
   h1,

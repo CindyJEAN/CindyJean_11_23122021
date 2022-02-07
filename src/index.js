@@ -1,5 +1,10 @@
 import "./index.scss";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import {
+  Redirect,
+  Route,
+  BrowserRouter as Router,
+  Switch,
+} from "react-router-dom";
 import About from "./pages/about/about";
 import AccommodationSheet from "./pages/accommodationSheet/accommodationSheet";
 import Error from "./pages/error/error";
@@ -25,6 +30,10 @@ ReactDOM.render(
           path="/accommodation/:id"
           render={(props) => <AccommodationSheet {...props} />}
         />
+        {/* <Route path="/error">
+          <Error />
+        </Route>
+        <Redirect from="*" to="/error"/> */}
         <Route>
           <Error />
         </Route>

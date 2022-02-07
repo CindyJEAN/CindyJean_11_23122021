@@ -1,6 +1,7 @@
-section.errorPage {
+.errorPage {
   height: calc(100vh - 5.5rem);
   display: flex;
+  margin: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;

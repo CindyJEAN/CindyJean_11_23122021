@@ -50,14 +50,20 @@ export default class AccommodationSheet extends Component {
    */
   constructor(props) {
     super(props);
+    try {
+      this.id = this.props.match.params.id;
+      this.accommodationData = getAccommodationById(this.id);
+      for (const [key, value] of Object.entries(this.accommodationData)) {
+        this[key] = value;
+      }
 
-    this.id = this.props.match.params.id;
-    this.accommodationData = getAccommodationById(this.id);
-    for (const [key, value] of Object.entries(this.accommodationData)) {
-      this[key] = value;
+      this.ratings = this.getRatingsAsArray(this.rating);
+    } catch (err) {
+      this.props.history.replace("/error");
+      // this.props.history.push("/error");
+      // <Redirect to="/error" />;
+      window.location.reload();
     }
-
-    this.ratings = this.getRatingsAsArray(this.rating);
   }
 
   /**
