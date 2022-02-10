@@ -3,13 +3,16 @@ import arrow from "../../assets/icon_arrow.svg";
 
 export default class Carousel extends Component {
   pictures;
+  title;
 
   /**
    * @param {Object} props
    * @param {Array} props.pictures
+   * @param {String} props.title
    */
   constructor(props) {
     super(props);
+    this.title = props.title;
     this.pictures = props.pictures;
     this.stepsNumber = this.pictures.length;
 
@@ -56,20 +59,20 @@ export default class Carousel extends Component {
   render() {
     return (
       <div className="carouselComponent">
-        <img src={this.state.actualPicture} className="carousel" />
+        <img src={this.state.actualPicture} alt={`${this.title}-${this.state.step+1}`} className="carousel" />
         {this.stepsNumber !== 1 && (
           <Fragment>
             <button
               onClick={() => this.handleChangePicture("previous")}
               className="previous"
             >
-              <img src={arrow} alt="" />
+              <img src={arrow} alt="flèche précédent" />
             </button>
             <button
               onClick={() => this.handleChangePicture("next")}
               className="next"
             >
-              <img src={arrow} alt="" />
+              <img src={arrow} alt="flèche suivant" />
             </button>
           </Fragment>
         )}

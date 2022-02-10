@@ -5,16 +5,8 @@ import { getAllAccommodations } from "../../data/accommodations";
 export default class Home extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
-    // this.state = {
-    //   accommodations: [],
-    // };
     this.accommodations = getAllAccommodations();
   }
-
-  // componentDidMount() {
-  //   this.setState({ accommodations: getAllAccommodations });
-  // }
 
   render() {
     return (

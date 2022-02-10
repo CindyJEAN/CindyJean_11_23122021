@@ -30,13 +30,10 @@ ReactDOM.render(
           path="/accommodation/:id"
           render={(props) => <AccommodationSheet {...props} />}
         />
-        {/* <Route path="/error">
+        <Route path="/404">
           <Error />
         </Route>
-        <Redirect from="*" to="/error"/> */}
-        <Route>
-          <Error />
-        </Route>
+        <Redirect from="*" to="/404"/>
       </Switch>
       <Footer />
     </Router>

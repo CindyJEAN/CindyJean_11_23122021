@@ -50,6 +50,7 @@ export default class AccommodationSheet extends Component {
    */
   constructor(props) {
     super(props);
+
     try {
       this.id = this.props.match.params.id;
       this.accommodationData = getAccommodationById(this.id);
@@ -59,15 +60,13 @@ export default class AccommodationSheet extends Component {
 
       this.ratings = this.getRatingsAsArray(this.rating);
     } catch (err) {
-      this.props.history.replace("/error");
-      // this.props.history.push("/error");
-      // <Redirect to="/error" />;
+      this.props.history.replace("/404");
       window.location.reload();
     }
   }
 
   /**
-   * changes the n number of rating in an array of n "primary" and 5-n "grey"
+   * changes the n number of rating in an array to n "primary" and 5-n "grey"
    * @returns {Array} array of "primary" and "grey"
    */
   getRatingsAsArray(rating) {
@@ -85,7 +84,7 @@ export default class AccommodationSheet extends Component {
   render() {
     return (
       <main className="accommodationSheetPage">
-        <Carousel pictures={this.pictures} />
+        <Carousel pictures={this.pictures} title={this.title} />
         <h1>{this.title}</h1>
         <address>{this.location}</address>
         <div className="tagsContainer">
@@ -98,12 +97,13 @@ export default class AccommodationSheet extends Component {
             <img
               key={index}
               src={rating === "primary" ? starPrimary : starGrey}
+              alt={rating === "primary" ? "étoile pleine" : "étoile vide"}
             />
           ))}
         </div>
         <div className="host">
           <p>{this.host.name}</p>
-          <img src={this.host.picture} />
+          <img src={this.host.picture} alt="image hôte" />
         </div>
         <div className="dropdownContainer">
           <Dropdown label="Description" content={[this.description]} />

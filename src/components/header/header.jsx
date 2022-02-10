@@ -13,7 +13,7 @@ export default class Header extends Component {
       <header className="headerComponent">
         <nav>
           <Link to="/">
-            <img src={logo} />
+            <img src={logo} alt="logo Kasa" />
           </Link>
           <div>
             <Link to="/" className="navLink">Accueil</Link>

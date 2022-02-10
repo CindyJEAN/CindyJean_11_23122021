@@ -10,7 +10,6 @@ body {
       "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // letter-spacing: 0.02em;
   }
 }
 
@@ -20,7 +19,6 @@ main {
   min-height: calc(100vh - 5.5rem);
 
   @include tablet {
-
     min-height: calc(100vh - 11rem);
   }
 }

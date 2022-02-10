@@ -34,7 +34,15 @@ export default class Dropdown extends Component {
       <article className="dropdownComponent">
         <button onClick={() => this.handleDropdownClick()}>
           {this.label}
-          <img src={arrow} className={this.state.isOpen ? "rotated" : ""} alt="" />
+          <img
+            src={arrow}
+            className={this.state.isOpen ? "rotated" : ""}
+            alt={
+              this.state.isOpen
+                ? "flèche fermer le contenu"
+                : "flèche ouvrir le contenu"
+            }
+          />
         </button>
         <div className={this.state.isOpen ? "visible" : ""}>
           {this.content.map((paragraph, index) => (
