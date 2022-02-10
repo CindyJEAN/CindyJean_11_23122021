@@ -110,7 +110,6 @@ export default class AccommodationSheet extends Component {
           <Dropdown label="Equipements" content={[...this.equipments]} />
         </div>
       </main>
-      //TODO dropdown component
     );
   }
 }

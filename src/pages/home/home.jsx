@@ -26,7 +26,6 @@ export default class Home extends Component {
                 title={title}
                 image={cover}
                 id={id}
-                numberOfAccommodations={this.accommodations.length}
               />
             );
           })}
