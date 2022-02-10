@@ -1,11 +1,12 @@
-import React, { Component } from "react";
 import Carousel from "../../components/carousel/carousel";
 import Dropdown from "../../components/dropdown/dropdown";
+import React from "react";
+import { Redirect } from "react-router-dom";
 import Tag from "../../components/tag/tag";
 import { getAccommodationById } from "../../data/accommodations";
 import starGrey from "../../assets/icon_star_grey.svg";
 import starPrimary from "../../assets/icon_star_primary.svg";
-export default class AccommodationSheet extends Component {
+export default class AccommodationSheet extends React.Component {
   //#region variables declaration
   /**
    * @type {String}
@@ -45,6 +46,7 @@ export default class AccommodationSheet extends Component {
   tags;
   //#endregion
 
+  redirect = false;
   /**
    * @param {Object} props
    */
@@ -60,8 +62,7 @@ export default class AccommodationSheet extends Component {
 
       this.ratings = this.getRatingsAsArray(this.rating);
     } catch (err) {
-      this.props.history.replace("/404");
-      window.location.reload();
+      this.redirect = true;
     }
   }
 
@@ -82,6 +83,7 @@ export default class AccommodationSheet extends Component {
   }
 
   render() {
+    if (this.redirect) return <Redirect to="/404" />;
     return (
       <main className="accommodationSheetPage">
         <Carousel pictures={this.pictures} title={this.title} />
