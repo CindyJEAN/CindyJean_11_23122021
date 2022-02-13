@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import arrow from "../../assets/icon_arrow.svg";
 
-export default class Carousel extends Component {
+export default class Carousel extends React.Component {
   pictures;
   title;
 
@@ -61,7 +61,7 @@ export default class Carousel extends Component {
       <div className="carouselComponent">
         <img src={this.state.actualPicture} alt={`${this.title}-${this.state.step+1}`} className="carousel" />
         {this.stepsNumber !== 1 && (
-          <Fragment>
+          <React.Fragment>
             <button
               onClick={() => this.handleChangePicture("previous")}
               className="previous"
@@ -74,7 +74,7 @@ export default class Carousel extends Component {
             >
               <img src={arrow} alt="flèche suivant" />
             </button>
-          </Fragment>
+          </React.Fragment>
         )}
         <p>
           {this.state.step + 1}/{this.stepsNumber}

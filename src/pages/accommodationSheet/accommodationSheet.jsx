@@ -68,6 +68,7 @@ export default class AccommodationSheet extends React.Component {
 
   /**
    * changes the n number of rating in an array to n "primary" and 5-n "grey"
+   * @param {String} rating
    * @returns {Array} array of "primary" and "grey"
    */
   getRatingsAsArray(rating) {

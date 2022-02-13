@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import arrow from "../../assets/icon_arrow.svg";
 
-export default class Dropdown extends Component {
+export default class Dropdown extends React.Component {
   label;
   content;
 

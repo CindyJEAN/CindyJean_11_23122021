@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import Dropdown from "../../components/dropdown/dropdown";
+import React from "react";
 
 const values = [
   {
@@ -24,12 +24,7 @@ const values = [
   },
 ];
 
-export default class About extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
+export default class About extends React.Component {
   render() {
     return (
       <main className="aboutPage">

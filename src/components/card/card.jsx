@@ -1,7 +1,7 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
-export default class Card extends Component {
+export default class Card extends React.Component {
   id;
   image;
   title;

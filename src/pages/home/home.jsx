@@ -1,8 +1,8 @@
-import React, { Component } from "react";
 import Card from "../../components/card/card";
+import React from "react";
 import { getAllAccommodations } from "../../data/accommodations";
 
-export default class Home extends Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.accommodations = getAllAccommodations();

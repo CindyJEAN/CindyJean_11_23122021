@@ -1,8 +1,8 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 import logo from "../../assets/logo_primary.svg";
 
-export default class Header extends Component {
+export default class Header extends React.Component {
   render() {
     return (
       <header className="headerComponent">

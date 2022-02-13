@@ -1,12 +1,7 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 
-export default class Error extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
+export default class Error extends React.Component {
   render() {
     return (
       <main className="errorPage">

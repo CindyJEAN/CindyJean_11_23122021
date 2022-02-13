@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Tag extends Component {
+export default class Tag extends React.Component {
   text;
 
   /**
